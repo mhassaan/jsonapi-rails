@@ -17,12 +17,12 @@ describe ActionController::Base, '#render', type: :controller do
     {
       'errors' => [
         {
-          'detail' => "Name #{I18n.t('errors.messages.blank')}",
+          'detail' => "#{I18n.t('errors.messages.blank')}",
           'title' => 'Invalid name',
           'source' => { 'pointer' => '/data/attributes/name' }
         },
         {
-          'detail' => 'Email must be a valid email',
+          'detail' => 'must be a valid email',
           'title' => 'Invalid email',
           'source' => { 'pointer' => '/data/attributes/email' }
         }
@@ -64,12 +64,12 @@ describe ActionController::Base, '#render', type: :controller do
       def create
         errors = [
           {
-            detail: "Name #{I18n.t('errors.messages.blank')}",
+            detail: "#{I18n.t('errors.messages.blank')}",
             title: 'Invalid name',
             source: { pointer: '/data/attributes/name' }
           },
           {
-            detail: 'Email must be a valid email',
+            detail: 'must be a valid email',
             title: 'Invalid email',
             source: { pointer: '/data/attributes/email' }
           }
